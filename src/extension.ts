@@ -16,15 +16,16 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 function formatLine(line: vscode.TextLine) {
-	var newString = intercalate("G")(line.text.toUpperCase());
-	newString = intercalate("X")(newString);
-	newString = intercalate("Y")(newString);
-	newString = intercalate("Z")(newString);
-	newString = intercalate("T")(newString);
-	newString = intercalate("S")(newString);
-	newString = removeSemicolons(newString);
-	newString = splitBySemicolons(newString);
-
+	const formatter = pipe(intercalate("G"),
+		intercalate("X"),
+		intercalate("Y"),
+		intercalate("Z"),
+		intercalate("T"),
+		intercalate("S"),
+		removeSemicolons,
+		splitBySemicolons
+	);
+	var newString = formatter(line.text.toUpperCase());
 	return [vscode.TextEdit.delete(line.range), vscode.TextEdit.insert(line.range.start, newString)];
 
 }
@@ -64,4 +65,4 @@ function splitBySemicolons(text: string): string {
 export function deactivate() { }
 
 const pipe = <R>(...fns: Array<(a: R) => R>) =>
-  fns.reduce((prevFn, nextFn) => value => nextFn(prevFn(value)));
+	fns.reduce((prevFn, nextFn) => value => nextFn(prevFn(value)));
