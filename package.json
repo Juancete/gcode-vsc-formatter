@@ -4,6 +4,10 @@
 	"description": "Formats ISO code",
 	"version": "0.0.1",
 	"publisher": "Juancete",
+	"repository": {
+		"type": "git",
+		"url": "https://https://github.com/Juancete/gcode-vsc-formatter.git"
+	  },
 	"engines": {
 		"vscode": "^1.38.0"
 	},
@@ -11,7 +15,8 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onLanguage:gcode"
+		"onLanguage:gcode",
+		"onLanguage:centroid-gcode"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
