@@ -2,7 +2,7 @@
 	"name": "gcode-formatter",
 	"displayName": "GCode Formatter",
 	"description": "Formats ISO code",
-	"version": "0.0.1",
+	"version": "0.0.4",
 	"publisher": "Juancete",
 	"repository": {
 		"type": "git",
@@ -12,7 +12,7 @@
 		"vscode": "^1.38.0"
 	},
 	"categories": [
-		"Other"
+		"Formatters"
 	],
 	"activationEvents": [
 		"onLanguage:gcode",

@@ -1,8 +1,7 @@
 import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
-
-	let disposable = vscode.languages.registerDocumentFormattingEditProvider('gcode', {
+	const block ={
 		provideDocumentFormattingEdits(document: vscode.TextDocument): vscode.TextEdit[] {
 			var coleccion: vscode.TextEdit[] = formatLine(document.lineAt(0));
 			for (let i = 1; i < document.lineCount; i++) {
@@ -10,9 +9,13 @@ export function activate(context: vscode.ExtensionContext) {
 			}
 			return coleccion;
 		}
-	});
+	};
+
+	let disposable = vscode.languages.registerDocumentFormattingEditProvider('gcode', block);
+	let otherDisposable = vscode.languages.registerDocumentFormattingEditProvider('centroid-gcode', block);
 
 	context.subscriptions.push(disposable);
+	context.subscriptions.push(otherDisposable);
 }
 
 function formatLine(line: vscode.TextLine) {
