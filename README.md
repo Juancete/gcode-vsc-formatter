@@ -12,6 +12,6 @@ The G-code formatter separates the G, M, S, X, Y and Z commands, transforms the 
 
 ## Releases
 
-### 1.0.0
+### 0.0.1
 
 Initial release of Gcode formatter

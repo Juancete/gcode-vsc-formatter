@@ -3,6 +3,7 @@
 	"displayName": "GCode Formatter",
 	"description": "Formats ISO code",
 	"version": "0.0.1",
+	"publisher": "Juancete",
 	"engines": {
 		"vscode": "^1.38.0"
 	},
