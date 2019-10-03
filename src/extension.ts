@@ -19,10 +19,11 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 function formatLine(line: vscode.TextLine) {
-	const letters = ["G","X","Y","Z","T","S"];
+	const lettersDigit = ["G","M","T"];
+	const letters = lettersDigit.concat(["X","Y","Z","I", "J","S", "R", "F", "C"]);
 
 	const formatter = pipe(...letters.map(intercalate),
-		...letters.map(twoDigits),
+		...lettersDigit.map(twoDigits),
 		removeSemicolons,
 		splitBySemicolons
 	);
@@ -42,7 +43,7 @@ let intercalate: stringTransformer = (character: string) => (text: string) => {
 	}
 	else { position = text.indexOf(character); }
 
-	if (position !== -1 && text.charAt(position - 1) !== " ") {
+	if (position !== -1 && text.charAt(position - 1) !== " " && text.charAt(position - 1) !== ",") {
 
 		return [text.slice(0, position), " "].join('').concat(intercalate(character)(text.slice(position)));
 	}
