@@ -24,10 +24,11 @@
             {
                 "id": "gocde",
                 "aliases": [
-                    "Foo"
+                    "Gcode formatter"
                 ],
                 "extensions": [
-                    "foo"
+					"nc",
+					"gcode"
                 ]
             }
         ]
