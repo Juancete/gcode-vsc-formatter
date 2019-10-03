@@ -3,7 +3,6 @@
 This is a formatter for G-Code language.
 
 [![Build Status](https://travis-ci.org/Juancete/gcode-vsc-formatter.svg?branch=master)](https://travis-ci.org/Juancete/gcode-vsc-formatter)
-
 [![VS Code Marketplace](https://vsmarketplacebadge.apphb.com/version/Juancete.gcode-formatter.svg) ![Downloads](https://vsmarketplacebadge.apphb.com/downloads-short/Juancete.gcode-formatter.svg) ![Installs](https://vsmarketplacebadge.apphb.com/installs-short/Juancete.gcode-formatter.svg)](https://marketplace.visualstudio.com/items?itemName=Juancete.gcode-formatter)
 
 ## Features
