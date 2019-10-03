@@ -18,7 +18,7 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(otherDisposable);
 }
 
-function formatLine(line: vscode.TextLine) {
+export function formatLine(line: vscode.TextLine) {
 	const lettersDigit = ["G","M","T"];
 	const letters = lettersDigit.concat(["X","Y","Z","I", "J","S", "R", "F", "C"]);
 

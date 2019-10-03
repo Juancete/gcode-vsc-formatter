@@ -27,3 +27,7 @@ minor Bugfixes
 ### 0.0.4
 
 Fix configuration problems
+
+### 0.0.5
+
+Tabulate R,C,I,J,C and F
