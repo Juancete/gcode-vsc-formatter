@@ -32,3 +32,7 @@ Fix configuration problems
 ### 0.0.5
 
 Tabulate R,C,I,J,C and F
+
+### 0.0.6
+
+Add test cases, travis and remove useless spaces in each line
