@@ -21,9 +21,9 @@ export function activate(context: vscode.ExtensionContext) {
 export function formatLine(line: vscode.TextLine) {
 	const lettersDigit = ["G", "M", "T"]
 	const letters = lettersDigit.concat(["X", "Y", "Z", "I", "J", "S", "R", "F", "C"])
-	intercalate("")("")
 	const formatter = pipe(...letters.map(intercalate),
 		...lettersDigit.map(commandsWithTwoDigits),
+		trimSpaces,
 		removeSemicolons,
 		splitBySemicolons
 	)
@@ -50,15 +50,25 @@ export let intercalate: stringTransformer = (character: string) => (text: string
 	else { return text }
 }
 
-export function trimSpaces(test: string): string {
-	return ""
+export function trimSpaces(text: string): string {
+	var position = text.indexOf(" ")
+	if (position !== -1) {
+		if ( text.charAt(position + 1) === " "){
+			const primerParte = text.slice(0, position)
+			const segundaParte =  text.slice(position+1)
+			return text.slice(0, position).concat(trimSpaces(text.slice(position+1)))
+		}
+		else {
+			const sigo = text.slice(position)
+			return text.slice(0, position+1).concat(trimSpaces(text.slice(position+1)))
+		}
+	}
+	return text
 }
 
 export let commandsWithTwoDigits: stringTransformer = (character: string) => (text: string) => {
 	var position = text.indexOf(character)
 	if (position !== -1) {
-		const value1 = isNaN(+text.charAt(position + 2))
-		const value2 = text.charAt(position + 2)
 		if (isNaN(+text.charAt(position + 2)) || text.charAt(position + 2) === " ") {
 			return [text.slice(0, position + 1), "0"].join('').concat(commandsWithTwoDigits(character)(text.slice(position + 1)))
 		}
