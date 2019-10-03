@@ -36,7 +36,8 @@
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",
 		"watch": "tsc -watch -p ./",
-		"pretest": "npm run compile",
+		"pretest": "npm run lint && npm run compile",
+		"lint": "tslint -p ./",
 		"test": "node ./out/test/runTest.js"
 	},
 	"devDependencies": {
