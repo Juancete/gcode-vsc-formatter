@@ -9,6 +9,10 @@
 			true,
 			"never"
 		],
+		"quotemark": [
+			true,
+			"single"
+		  ],
 		"triple-equals": true
 	},
 	"defaultSeverity": "warning"
