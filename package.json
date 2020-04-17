@@ -2,7 +2,7 @@
 	"name": "gcode-formatter",
 	"displayName": "GCode Formatter",
 	"description": "Formats ISO code",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"publisher": "Juancete",
 	"repository": {
 		"type": "git",
@@ -54,13 +54,13 @@
 	"devDependencies": {
 		"@types/glob": "^7.1.1",
 		"@types/mocha": "^5.2.6",
-		"@types/node": "^10.12.21",
-		"@types/vscode": "^1.38.0",
-		"glob": "^7.1.4",
+		"@types/node": "^10.17.19",
+		"@types/vscode": "^1.44.0",
 		"codelyzer": "~5.1.2",
-		"mocha": "^6.2.0",
-		"tslint": "^5.18.0",
-		"typescript": "^3.5.3",
-		"vscode-test": "^1.2.0"
+		"glob": "^7.1.6",
+		"mocha": "^6.2.3",
+		"tslint": "^5.20.1",
+		"typescript": "^3.8.3",
+		"vscode-test": "^1.3.0"
 	}
 }

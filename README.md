@@ -36,3 +36,7 @@ Tabulate R,C,I,J,C and F
 ### 0.0.6
 
 Add test cases, travis and remove useless spaces in each line
+
+### 0.0.7
+
+Update dependencies.
