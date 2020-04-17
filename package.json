@@ -9,7 +9,7 @@
 		"url": "https://https://github.com/Juancete/gcode-vsc-formatter.git"
 	},
 	"engines": {
-		"vscode": "^1.38.0"
+		"vscode": "^1.44.0"
 	},
 	"categories": [
 		"Formatters"
