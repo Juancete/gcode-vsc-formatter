@@ -4,6 +4,7 @@
 	"description": "Formats ISO code",
 	"version": "0.0.7",
 	"publisher": "Juancete",
+	"license": "MPL 2.0",
 	"repository": {
 		"type": "git",
 		"url": "https://https://github.com/Juancete/gcode-vsc-formatter.git"
