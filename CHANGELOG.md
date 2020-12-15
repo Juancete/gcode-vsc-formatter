@@ -29,3 +29,7 @@ Add test cases, travis and remove useless spaces in each line
 ### 0.0.7
 
 Update dependencies.
+
+### 0.0.8
+
+Ignore comments
