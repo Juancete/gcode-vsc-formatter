@@ -1,6 +1,6 @@
 type stringTransformer = (character: string) => (text: string) => string
 
-export let intercalate: stringTransformer = (character: string) => (text: string) => {
+export const intercalate: stringTransformer = (character: string) => (text: string) => {
 	var position: number
 	if (text.charAt(0) === character) {
 		{

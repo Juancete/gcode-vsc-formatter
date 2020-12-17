@@ -7,9 +7,8 @@ const characters = charactersFromCodeWithDigits.concat(['X', 'Y', 'Z', 'I', 'J',
 export function activate(context: vscode.ExtensionContext) {
 	const block = {
 		provideDocumentFormattingEdits(document: vscode.TextDocument): vscode.TextEdit[] {
-			var coleccion: vscode.TextEdit[] = formatLine(document.lineAt(0))
-
-			for (let i = 1; i < document.lineCount; i++) {
+			var coleccion: vscode.TextEdit[] = []
+			for (let i = 0; i < document.lineCount; i++) {
 				coleccion = coleccion.concat(formatLine(document.lineAt(i)))
 			}
 			return coleccion
