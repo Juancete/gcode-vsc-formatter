@@ -12,6 +12,7 @@ suite('Extension Test Suite', () => {
 	const lineSpaced = 'G3 X100.08 Y3.11 I28.91 J4.36;'
 	const lineSuperSpaced = ' G3  X100.08    Y3.11    I28.91   J4.36;'
 	const comment = '(test circle)'
+	const conditional = 'IF[[#GYGZ]EQ0]GOTO999'
 
 	test('If Code is at the start, does not add a space', () => {
 		assert.strictEqual('G3X100.08Y3.11I28.91;J4.36;', AuxFunctions.intercalate('G')(line))
@@ -45,5 +46,8 @@ suite('Extension Test Suite', () => {
 	})
 	test('If line has a comment, then formatter do nothing', () => {
 		assert.strictEqual(comment.toUpperCase(), GcodeFormatterExtension.formatText(comment))
+	})
+	test('If line has a conditional, then formatter do nothing', () => {
+		assert.strictEqual(conditional.toUpperCase(), GcodeFormatterExtension.formatText(conditional))
 	})
 })
