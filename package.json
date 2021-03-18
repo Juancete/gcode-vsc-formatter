@@ -2,7 +2,7 @@
 	"name": "gcode-formatter",
 	"displayName": "GCode Formatter",
 	"description": "Formats ISO code",
-	"version": "0.0.8",
+	"version": "0.0.9",
 	"publisher": "Juancete",
 	"license": "MPL 2.0",
 	"repository": {
