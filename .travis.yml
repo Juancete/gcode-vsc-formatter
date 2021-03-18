@@ -16,7 +16,9 @@ before_script:
   - sudo apt-get install -y software-properties-common
   - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
   - sudo apt-get update
-  - sudo apt-get install -y curl build-essential supervisor wget libstdc++6
+  - sudo apt-get install -y curl build-essential supervisor wget
+  - wget http://security.ubuntu.com/ubuntu/pool/main/g/gcc-5/libstdc++6_5.4.0-6ubuntu1~16.04.10_amd64.deb
+  - sudo dpkg -i libstdc++6_5.4.0-6ubuntu1~16.04.10_amd64.deb
 
 install:
   - npm ci
