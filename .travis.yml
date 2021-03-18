@@ -12,6 +12,13 @@ branches:
 before_script:
   - export DISPLAY=:99.0
   - /usr/bin/Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+  - apt-get update
+  - apt-get install -y software-properties-common
+  - add-apt-repository ppa:ubuntu-toolchain-r/test
+  - apt-get update
+  - apt-get install -y curl build-essential supervisor wget libstdc++6
+  - apt-get upgrade -y
+  - apt-get dist-upgrade
 
 install:
   - npm ci
