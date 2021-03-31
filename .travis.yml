@@ -17,7 +17,7 @@ before_script:
   - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
   - sudo apt-get update
   - sudo apt-get install -y curl build-essential supervisor wget
-  - wget http://es.archive.ubuntu.com/ubuntu/pool/main/g/gcc-5/libstdc++6_5.4.0-6ubuntu1~16.04.12_amd64.deb
+  - wget http://launchpadlibrarian.net/375474836/libstdc++6_5.4.0-6ubuntu1~16.04.10_amd64.deb
   - sudo dpkg -i libstdc++6_5.4.0-6ubuntu1~16.04.10_amd64.deb
 
 install:
